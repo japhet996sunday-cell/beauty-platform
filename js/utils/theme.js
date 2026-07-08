@@ -25,4 +25,3 @@ export function toggleTheme() {
 export function getCurrentTheme() {
   return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
 }
-
