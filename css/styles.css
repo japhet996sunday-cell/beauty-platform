@@ -7,12 +7,6 @@
 @import "feedback.css";
 @import "landing.css";
 @import "auth.css";
-@import "feed.css";
-@import "discover.css";
-@import "profile.css";
-@import "create.css";
-@import "notifications.css";
-@import "messages.css";
 
 .text-center {
   text-align: center;
@@ -74,4 +68,4 @@
 
 main {
   min-height: 60vh;
-       }
+}
