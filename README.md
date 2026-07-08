@@ -144,3 +144,5 @@ Dark mode is toggled via `data-theme` on `<html>` and persists to `localStorage`
 
 Targets current versions of Chrome, Firefox, Safari, and Edge. Uses `color-mix()`, CSS nesting-free custom properties, `IntersectionObserver`, and ES modules — no polyfills included.
  
+## Live Demo
+https://japhet996sunday-cell.github.io/beauty-platform/
