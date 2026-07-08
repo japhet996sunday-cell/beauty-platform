@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages — Lumière</title>
+  <meta name="description" content="Chat with creators and friends on Lumière.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="app-header is-app-shell">
+    <div class="container">
+      <a href="home.html" class="brand" aria-label="Lumière home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        Lumière
+      </a>
+
+      <nav class="nav-primary" aria-label="Primary">
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="discover.html" class="nav-link">Discover</a>
+        <a href="messages.html" class="nav-link is-active">Messages</a>
+        <a href="notifications.html" class="nav-link">Notifications</a>
+      </nav>
+
+      <div class="nav-search">
+        <svg class="nav-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="search" placeholder="Search creators, routines, tags" aria-label="Search Lumière">
+      </div>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" data-theme-toggle aria-label="Toggle dark mode">
+          <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
+        </button>
+        <a href="notifications.html" class="nav-icon-btn" aria-label="Notifications">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+        </a>
+        <a href="profile.html">
+          <img class="avatar avatar-sm" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&q=80" alt="Your profile">
+        </a>
+        <button type="button" class="nav-icon-btn menu-toggle" data-menu-toggle aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-drawer" data-mobile-drawer aria-hidden="true">
+    <div class="mobile-drawer-overlay" data-drawer-overlay></div>
+    <div class="mobile-drawer-panel">
+      <div class="mobile-drawer-header">
+        <span class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          Lumière
+        </span>
+        <button type="button" class="nav-icon-btn" data-drawer-close aria-label="Close menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <nav class="mobile-drawer-nav" aria-label="Mobile">
+        <a href="home.html" class="mobile-drawer-link">Home</a>
+        <a href="discover.html" class="mobile-drawer-link">Discover</a>
+        <a href="messages.html" class="mobile-drawer-link is-active">Messages</a>
+        <a href="notifications.html" class="mobile-drawer-link">Notifications</a>
+        <a href="profile.html" class="mobile-drawer-link">Profile</a>
+        <a href="settings.html" class="mobile-drawer-link">Settings</a>
+      </nav>
+    </div>
+  </div>
+
+  <main id="main-content" class="page-transition">
+    <div class="messages-layout">
+      <section class="conversation-panel" data-conversation-panel aria-label="Conversations">
+        <div class="conversation-panel-header">
+          <h1 style="font-size: var(--fs-lg);">Messages</h1>
+          <div class="conversation-search">
+            <svg class="conversation-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="search" data-conversation-search placeholder="Search messages">
+          </div>
+        </div>
+        <div class="conversation-list" data-conversation-list></div>
+      </section>
+
+      <section class="chat-panel is-hidden-mobile" data-chat-panel aria-label="Conversation">
+        <div class="chat-header">
+          <button type="button" class="nav-icon-btn chat-back-btn" data-chat-back aria-label="Back to conversations">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <div class="conversation-avatar-wrap">
+            <img class="avatar avatar-sm" src="" alt="" data-chat-avatar>
+            <span class="online-dot" data-chat-online-dot hidden></span>
+          </div>
+          <div class="chat-header-meta">
+            <strong data-chat-name></strong>
+            <span class="chat-header-status" data-chat-status></span>
+          </div>
+          <button type="button" class="nav-icon-btn" aria-label="Conversation options">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+          </button>
+        </div>
+
+        <div class="chat-messages" data-chat-messages></div>
+
+        <form class="chat-input-row" data-chat-form>
+          <input type="text" data-chat-input placeholder="Type a message…" aria-label="Message input" autocomplete="off">
+          <button type="submit" class="chat-send-btn" aria-label="Send message">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+          </button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/pages/messages.js"></script>
+</body>
+</html>
 
