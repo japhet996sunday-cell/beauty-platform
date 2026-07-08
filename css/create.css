@@ -1,1 +1,224 @@
+.create-layout {
+  max-width: 620px;
+  margin-inline: auto;
+  padding-block: var(--space-6);
+}
+
+.create-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+}
+
+.create-dropzone {
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-4);
+  cursor: pointer;
+  transition: border-color var(--duration-fast) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard);
+}
+
+.create-dropzone:hover,
+.create-dropzone.is-dragover {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent-soft);
+}
+
+.create-dropzone-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-petal);
+  background-color: var(--color-surface-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
+.create-dropzone input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.image-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.image-preview-item {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.image-preview-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-preview-remove {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: rgba(28, 24, 21, 0.65);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.image-preview-cover-badge {
+  position: absolute;
+  bottom: var(--space-2);
+  left: var(--space-2);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-full);
+  background-color: rgba(28, 24, 21, 0.65);
+  color: #FFFFFF;
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.add-more-tile {
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  border: 1.5px dashed var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted);
+  font-size: 1.6rem;
+}
+
+.add-more-tile:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent-strong);
+}
+
+.create-composer {
+  margin-top: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.create-caption-field {
+  position: relative;
+}
+
+.create-caption-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.character-count {
+  position: absolute;
+  bottom: var(--space-3);
+  right: var(--space-4);
+  font-size: var(--fs-xs);
+  color: var(--color-muted);
+}
+
+.tag-input-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+}
+
+.tag-input-row:focus-within {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 4px var(--color-accent-soft);
+}
+
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  background-color: var(--color-accent-soft);
+  color: var(--color-accent-strong);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+}
+
+.tag-chip button {
+  color: var(--color-accent-strong);
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.tag-input-row input {
+  flex: 1;
+  min-width: 120px;
+  border: none;
+  background: transparent;
+  font-size: var(--fs-sm);
+}
+
+.tag-input-row input:focus {
+  outline: none;
+}
+
+.create-options-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.create-options-label {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.create-options-hint {
+  font-size: var(--fs-xs);
+  color: var(--color-muted);
+}
+
+.create-submit-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.upload-progress-track {
+  height: 6px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface-alt);
+  overflow: hidden;
+  margin-top: var(--space-4);
+}
+
+.upload-progress-fill {
+  height: 100%;
+  width: 0%;
+  background-color: var(--color-accent);
+  transition: width 200ms linear;
+}
 
